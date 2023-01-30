@@ -10,7 +10,7 @@ function makeTeam(member) {
 	let teamA = [];
 	let teamB = [];
 	Object.values(member).forEach(arr => {
-		let i = getRandomNum(0, 2);
+		let i = Random.getRandomTeamNum();
 		teamA.push(arr[i]);
 		teamB.push(arr[Math.abs(i - 1)]);
 	})

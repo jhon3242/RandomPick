@@ -165,12 +165,21 @@ let champs = `마오카이
 let champList = champs.split("\n");
 
 function benpick(list, name) {
-	list.filter(champ => champ != name);
+	for (let index = 0; index < list.length; index++) {
+		const element = list[index];
+		if (element == name) {
+			list[index] = "";
+			break;
+		}
+	}
 }
 
 function getRandomChamp(list) {
 	let size = list.length - 1;
-	let champ = list[getRandomNum(0, size)];
+	let num = (Random.getRandomChampNum());
+	let champ = list[num];
+	if (champ == "")
+		return getRandomChamp(list);
 	list = benpick(list, champ);
 	return champ;
 }
@@ -179,7 +188,3 @@ function getRandomChamp(list) {
 // 	console.log(`${i} ${n}`);
 // }
 
-let list = ["A", "B"];
-
-benpick(list, "A");
-console.log(list);

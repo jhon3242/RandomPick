@@ -51,21 +51,52 @@ body{
 }
 
 .player{
-	flex : 1;
+	flex: 1;
     font-size: 20px;
-    margin-top: 50px;
-	height: 15%;
-	margin-left: 10px;
-	flex-grow: 1;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 15%;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-style: solid;
+    text-align: center;
+    flex-grow: 1;
 }
 
 .name{
 	width: 50%;
+	margin-top: 20%;
 	float: left;
 	box-sizing: border-box;
 }
 .champ{
 	width: 50%;
-        float: left;
-        box-sizing: border-box;
+	margin-top: 20%;
+	float: left;
+	box-sizing: border-box;
 }
+
+#seed {
+	background-color: #eee;
+	border: none;
+	padding: 12px 15px;
+	margin: 8px 0;
+	width: 100%;
+}
+
+button {
+	border-radius: 20px;
+	border: 1px solid #FF4B2B;
+	background-color: #FF4B2B;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+}
+
+button:active {
+	transform: scale(0.95);
+  }
