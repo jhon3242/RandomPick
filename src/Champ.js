@@ -174,6 +174,12 @@ function benpick(list, name) {
 	}
 }
 
+function arrayBenpick(list, arr) {
+	for (let champ in arr) {
+		benpick(list, champ);
+	}
+}
+
 function getRandomChamp(list) {
 	let size = list.length - 1;
 	let num = (Random.getRandomChampNum());

@@ -10,6 +10,10 @@ function run(){
 	
 	Random.seed = new Date(document.getElementById("seed").value);
 	// alert(Random.seed);
+	let benpickArr = ["노틸러스", "레오나", "스웨인", "블라디미르", "타릭", "레넥톤"];
+	arrayBenpick(champList, benpickArr);
+	document.getElementById("benpick").innerText = benpickArr.toString();
+
 	let [teamA, teamB] = makeTeam(Member);
 	let i = 1;
 	for (let i=0; i<3; i++){
